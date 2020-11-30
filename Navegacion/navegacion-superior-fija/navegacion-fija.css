@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;1,700&display=swap');
+
+/* ==== GENERAL STYLES ==== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Mono";
+}
+
+
+/* Estilo del menú */
+nav {
+  background-color: rgba(0, 0, 0, .9);
+  text-align: center;
+  padding: 1rem;
+}
+
+a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  line-height: 2rem;
+  height: 2rem;
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* Estilo del menú con ancho de 768px*/
+@media (min-width: 768px) {
+  nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  
+  a {
+    width: 11%;
+  }
+  
+  /* Hago flotar los elementos a */
+  .right {
+    float: right;
+  }
+  
+  .left {
+    float: left;
+  }
+  
+  .right:hover, .left:hover {
+    color: gray;
+  }
+  
+  .capsula:hover {
+    background-color: white;
+  }
+  
+  /* Clearfix */
+  nav::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+}
+
+/* Estilo del contenido */
+p {
+  width: 95%;
+  margin: 0.5rem auto 3rem auto;
+  text-align: justify;
+}
+
+/* Estilo de los párrafos con ancho de 768px*/
+@media (min-width: 768px) {
+  p {
+    width: 59%;
+    margin: 1.2rem auto 3rem auto;
+  }
+}
+
+/* Dando margen superior al elemento main para que se vea completo */
+@media (min-width: 768px) {
+  main {
+    margin-top: 5rem;
+  }
+}
+
+  
+/* Estilo del boton Sign up */
+.capsula {
+  border: 1px solid rgba(255, 255, 255, .3);
+  border-radius: 9999px;
+}
+
+
+
+
+
+
