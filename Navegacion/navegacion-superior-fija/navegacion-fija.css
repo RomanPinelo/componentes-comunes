@@ -1,102 +1,82 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;1,700&display=swap');
-
 /* ==== GENERAL STYLES ==== */
 
 * {
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Space Mono";
-}
+/* ==== A FLOATED TOP NAVIGATION ==== */
 
-
-/* Estilo del menú */
 nav {
-  background-color: rgba(0, 0, 0, .9);
-  text-align: center;
+  background-color: rgba(0,0,0,.9);
   padding: 1rem;
 }
 
-a {
-  display: block;
-  color: white;
+nav a {
   text-decoration: none;
-  line-height: 2rem;
-  height: 2rem;
-  width: 95%;
-  margin: 0 auto;
+  font-family: 'Space Mono', monospace;
+  text-align: center;
+  display: block;
+  padding: .5rem 1rem;
+  color: #fff;
 }
 
-/* Estilo del menú con ancho de 768px*/
-@media (min-width: 768px) {
-  nav {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-  }
-  
-  a {
-    width: 11%;
-  }
-  
-  /* Hago flotar los elementos a */
-  .right {
-    float: right;
-  }
-  
-  .left {
-    float: left;
-  }
-  
-  .right:hover, .left:hover {
-    color: gray;
-  }
-  
-  .capsula:hover {
-    background-color: white;
-  }
-  
-  /* Clearfix */
-  nav::after {
-    content: "";
-    clear: both;
-    display: block;
-  }
+nav a:hover {
+  color: hsl(0, 0%, 77%);
+  transition: color .15s ease-in-out;
 }
 
-/* Estilo del contenido */
-p {
-  width: 95%;
-  margin: 0.5rem auto 3rem auto;
-  text-align: justify;
-}
-
-/* Estilo de los párrafos con ancho de 768px*/
-@media (min-width: 768px) {
-  p {
-    width: 59%;
-    margin: 1.2rem auto 3rem auto;
-  }
-}
-
-/* Dando margen superior al elemento main para que se vea completo */
-@media (min-width: 768px) {
-  main {
-    margin-top: 5rem;
-  }
-}
-
-  
-/* Estilo del boton Sign up */
-.capsula {
-  border: 1px solid rgba(255, 255, 255, .3);
+.sign-up {
+  border: 1px solid hsla(0,0%,100%,.2);
   border-radius: 9999px;
 }
 
+.sign-up:hover {
+  color: #000;
+  background-color: #fff;
+  transition: background-color .15s ease-in-out;
+}
 
+@media (min-width: 768px) {
 
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
 
+  nav a {
+    float: right;
+  }
 
+  .home {
+    float: left;
+  }
 
+    /* Clearfix */
+    nav::after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+
+}
+
+section {
+  font-size: 1rem;
+  font-family: 'Space Mono', monospace;
+}
+
+@media (min-width: 768px) {
+
+  section {
+    width: 60%;
+    margin: 5.25rem auto 1.25rem;
+  }
+
+}
+
+p {
+  margin-bottom: 1.25rem;
+  padding: .5rem;
+}
